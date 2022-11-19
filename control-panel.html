@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+        <head>
+                <!--Author: Maxence Leguéry-->
+                <meta charset="utf-8" />
+                <link rel="stylesheet" href="stylePanel.css" />
+                <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+                <script type="text/javascript" src="scriptControl.js"></script>
+                <title>Plugin Custom</title>
+        </head>
+
+        <body>
+                <img width=320 height=74 src="Technimage_blanc.png">
+
+                <h3>Plugin Technimage custom</h3>
+
+                <button type="button" id="b1" class="favorite styled">
+                        Bouton 1
+                </button>
+                <p id="console">Output console :</p>
+
+                <div id="tabs">
+                        <button type="button" id="tab1" class="favorite styled" onclick="loadTab(this)">
+                                Onglet 1
+                        </button>
+                        <button type="button" id="tab2" class="favorite styled" onclick="loadTab(this)">
+                                ATEM
+                        </button>
+                        <button type="button" id="tab3" class="favorite styled" onclick="loadTab(this)">
+                                Onglet 3
+                        </button>
+                </div>
+
+                <div id="tab1d" hidden="true">
+
+                        <fieldset>
+                                <legend>Activate elements</legend>
+                        
+                                <div>
+                                        <input type="checkbox" id="time" name="time" checked>
+                                        <label for="scales">Time</label>
+                                </div>
+                                <div>
+                                        <input type="checkbox" id="ticker" name="ticker" checked>
+                                        <label for="scales">News Ticker</label>
+                                </div>
+                        </fieldset>
+
+                        <fieldset>
+                                <legend>Add a line to the ticker.</legend>
+                                <input type="text" id="tickerText" name="tickerText">
+                                <button type="button" id="addButton" class="favorite styled">
+                                        Add
+                                </button>
+                                <button type="button" id="refreshTicker" class="favorite styled">
+                                        Refresh
+                                </button>
+                        </fieldset>
+
+                        <fieldset>
+                                <legend>Remove a line from the ticker.</legend>
+                                <select name="tickerTexts" id="tickerTexts">
+                                        <option value="">--Please choose a line to remove--</option>
+                                </select>
+                                <button type="button" id="removeButton" class="favorite styled">
+                                        Remove
+                                </button>
+                        </fieldset>
+                </div>
+
+                <div id="tab2d">
+                        <fieldset hidden="true">
+                                <legend>Change scene</legend>
+                                <select name="scenesTab" id="scenesTab">
+                                        <option value="">--Select scene--</option>
+                                </select>
+                                <button type="button" id="changeSceneButton" class="favorite styled">
+                                        Change
+                                </button>
+                        </fieldset>
+                        <fieldset>
+                                <legend>ATEM control</legend>
+                                <button type="button" id="atemButton1" class="buttonATEM1">
+                                        1
+                                </button>
+                                <button type="button" id="atemButton2" class="buttonATEM2">
+                                        2
+                                </button>
+                                <button type="button" id="atemButton3" class="buttonATEM3">
+                                        3
+                                </button>
+                                <button type="button" id="atemButton4" class="buttonATEM4">
+                                        4
+                                </button>
+                        </fieldset>
+                </div>
+
+                <div id="tab3d" hidden="true">
+                        Onglet 3
+                </div>
+        </body>
+</html>
