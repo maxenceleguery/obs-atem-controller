@@ -10,9 +10,9 @@ var ticker2;
 
 
 var newsTicker = new Array();
-newsTicker.push("Texte 1");
-newsTicker.push("Texte 2");
-newsTicker.push("Texte 3");
+newsTicker.push("Text 1");
+newsTicker.push("Text 2");
+newsTicker.push("Text 3");
 
 function putOnOutput(data) {
         switch (data.id) {
@@ -66,7 +66,6 @@ setInterval(function () {
 }, 1000);
 
 window.onload = function () {
-        root = document.documentElement;
         text1 = document.getElementById("text1");
         footer = document.getElementById("footer");
         date = document.getElementById("date");

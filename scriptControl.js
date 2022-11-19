@@ -6,9 +6,9 @@ const bcObs = new BroadcastChannel("channelObs");
 var c = 0;
 
 var newsTicker = new Array();
-newsTicker.push("Texte 1");
-newsTicker.push("Texte 2");
-newsTicker.push("Texte 3");
+newsTicker.push("Text 1");
+newsTicker.push("Text 2");
+newsTicker.push("Text 3");
 
 var ATEMbuttons = new Array();
 
