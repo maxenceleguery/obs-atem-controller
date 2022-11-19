@@ -14,8 +14,8 @@ newsTicker.push("Text 1");
 newsTicker.push("Text 2");
 newsTicker.push("Text 3");
 
-function putOnOutput(data) {
-        switch (data.id) {
+function putOnOutput(msg) {
+        switch (msg.id) {
                 case "changeTime":
                         footer.hidden = !footer.hidden;
                         break;
@@ -23,14 +23,14 @@ function putOnOutput(data) {
                         ticker.hidden = !ticker.hidden;
                         break;
                 case "updateTicker":
-                        newsTicker = data.data;
+                        newsTicker = msg.data;
                         updateTicker();
                         break;
                 default:
-                        if (typeof data.data !== "undefined" && data.data !== "" )
-                                text1.textContent = text1.textContent+"\n" +data;
-                        else if (typeof data === "string")
-                                text1.textContent = text1.textContent+" "+data;
+                        if (typeof msg.id === "undefined" && msg !== "" )
+                                text1.textContent = text1.textContent+"\n" +msg;
+                        else if (typeof msg.data !== "undefined")
+                                text1.textContent = text1.textContent+" "+msg.data;
                         else
                                 text1.textContent = text1.textContent+"\nNULL";
                         break;
@@ -66,6 +66,7 @@ setInterval(function () {
 }, 1000);
 
 window.onload = function () {
+        root = document.documentElement;
         text1 = document.getElementById("text1");
         footer = document.getElementById("footer");
         date = document.getElementById("date");

@@ -1,7 +1,5 @@
 const bcObs = new BroadcastChannel("channelObs");
 
-
-
 bcObs.onmessage = (event) => {
         if (event.data.sender === "panel") {
                 switch (event.data.id) {
